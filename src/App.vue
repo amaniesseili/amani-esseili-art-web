@@ -1,16 +1,17 @@
 
 <script>
-	export default {
 
-	}
+
+export default {
+
+}
 </script>
-
 
 <template>
   <div>
     <nav class="navbar fixed-top navbar-expand-lg custom-nav">
       <div class="container">
-        <a class="navbar-brand" href="#"> <img src="/amani-white-logo.png" class="logo" alt=""></a>
+        <a class="navbar-brand" href="#"> <img src="/amani-white-logo.png" class="logo" alt="amani esseili logo"></a>
         <!-- ---------button toggler---------- -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -18,23 +19,26 @@
         <!-- --------------------------------- -->
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
+            <!--  -->
+            
+            <!--  -->
             <li class="nav-item me-5 custom-nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <router-link to="/" class="nav-link">{{ $t('home') }}</router-link>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link" href="#">Biography</a>
+              <router-link to="/biography" class="nav-link" >{{ $t('biography') }}</router-link>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link" href="#">Artworks</a>
+              <router-link to="/artworks" class="nav-link" >Artworks</router-link>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link" href="#">Exhibitions</a>
+              <router-link to="/exhibitions" class="nav-link" >Exhibitions</router-link>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link" href="#">Media</a>
+              <router-link to="/media" class="nav-link" >Media</router-link>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link" href="#">Contact</a>
+              <router-link to="/contact" class="nav-link" >Contact</router-link>
             </li>
             
             <li class="nav-item dropdown">
@@ -45,14 +49,14 @@
               <!----- dropdown menu for languages ----->
               <ul class="dropdown-menu p-1 ">
                 <li class="amani-dropdow-nav ">
-                  <a class="dropdown-item" href="#"><img src="/Flag_of_en.png" class="flags" alt=""> English </a>
+                  <a class="dropdown-item"><img src="/Flag_of_en.png" class="flags" alt=""> English </a>
                 </li>
                 <li class="amani-dropdow-nav">
-                  <a class="dropdown-item" href="#"><img src="/Flag_of_it.png" class="flags" alt=""> Italian</a>
+                  <a class="dropdown-item"><img src="/Flag_of_it.png" class="flags" alt=""> Italian</a>
                 </li>
-                <li class="amani-dropdow-nav">
+                <!-- <li class="amani-dropdow-nav">
                   <a class="dropdown-item" href="#"> <img src="/Flag_of_lb.png" class="flags" alt=""> Arabic</a>
-                </li>
+                </li> -->
               </ul>
               <!-- ---------------------- -->
             </li>
@@ -60,8 +64,16 @@
         </div>
       </div>
     </nav>
-    amani esseili
+    
   </div>
+  <!-- ---------main---------- -->
+  <main>
+    <router-view></router-view>
+  </main>
+  <!-- --------footer---------- -->
+  <footer>
+
+  </footer>
 </template>
 
 
